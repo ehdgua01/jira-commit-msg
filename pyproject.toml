@@ -32,6 +32,9 @@ mypy = "*"
 pre-commit = "*"
 flake8 = "*"
 
+[tool.poetry.scripts]
+jira-commit-msg = "src.jira_commit_msg:main"
+
 [build-system]
 requires = ["poetry>=0.12"]
 build-backend = "poetry.masonry.api"
