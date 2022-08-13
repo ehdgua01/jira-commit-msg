@@ -1,0 +1,32 @@
+name: schedules
+
+on:
+  schedule:
+  - cron: '0 0 * * *'
+
+jobs:
+  pre-commit-auto-update:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+
+    - name: Install Poetry
+      uses: snok/install-poetry@v1
+
+    - name: Install dependencies
+      run: |
+        poetry update pre-commit
+
+    - name: Auto-update pre-commit-hooks
+      run: |
+        git config --global user.name github-actions
+        git config --global user.email github-actions@github.com
+        poetry run pre-commit autoupdate
+        git commit -am "Update pre-commit" || true
+        git push || true
