@@ -1,0 +1,6 @@
+- id: jira-commit-msg
+  name: Jira commit message
+  description: Check that the commit message starts with the Jira ticket number
+  entry: jira-commit-msg
+  language: python
+  stages: [commit-msg]
