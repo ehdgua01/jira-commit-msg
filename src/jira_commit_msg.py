@@ -12,7 +12,7 @@ def main(argv: tp.Sequence[str] | None = None) -> int:
     parser.add_argument("filename")
     args = parser.parse_args(argv)
     print(argv, args)
-    return PASS
+    return FAIL
 
 
 if __name__ == "__main__":
