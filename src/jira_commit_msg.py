@@ -1,4 +1,3 @@
-import argparse
 import re
 import typing as tp
 
@@ -9,8 +8,5 @@ PASS = 0
 
 def main(argv: tp.Sequence[str] | None = None) -> int:
     print("test")
-    parser = argparse.ArgumentParser()
-    parser.add_argument("filename")
-    args = parser.parse_args(argv)
-    print(argv, args)
+    print(argv)
     return FAIL
