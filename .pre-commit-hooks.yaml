@@ -5,3 +5,4 @@
   language: python
   stages: [commit-msg]
   always_run: true
+  pass_filenames: true
