@@ -14,7 +14,3 @@ def main(argv: tp.Sequence[str] | None = None) -> int:
     args = parser.parse_args(argv)
     print(argv, args)
     return FAIL
-
-
-if __name__ == "__main__":
-    raise SystemExit(main())
