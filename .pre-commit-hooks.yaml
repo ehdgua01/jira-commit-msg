@@ -4,3 +4,4 @@
   entry: jira-commit-msg
   language: python
   stages: [commit-msg]
+  always_run: true
