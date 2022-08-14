@@ -21,6 +21,9 @@ name = "jira-commit-msg"
 version = "0.1.0"
 description = ""
 authors = ["KDH <ehdgua01@naver.com>"]
+packages = [
+    { include = "src/**/*.py" },
+]
 
 [tool.poetry.dependencies]
 python = "^3.10"
