@@ -17,7 +17,7 @@ warn_redundant_casts = true
 warn_unused_configs = true
 
 [tool.poetry]
-name = "python-project-template"
+name = "jira-commit-msg"
 version = "0.1.0"
 description = ""
 authors = ["KDH <ehdgua01@naver.com>"]
